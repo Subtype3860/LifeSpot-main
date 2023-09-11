@@ -29,6 +29,9 @@ test-results/
 Thumbs.db
 .idea/
 .vs/
+.vscode/
+.bin/
+.obj/
 
 # Mac bundle stuff
 *.dmg
