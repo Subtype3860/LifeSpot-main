@@ -1,7 +1,9 @@
+using System;
 using System.IO;
 using System.Text;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Routing;
 
 public static class EndpointMapper
@@ -48,8 +50,8 @@ public static class EndpointMapper
             builder.MapGet($"/Static/IMG/{fileName}", async context =>
             {
                 var imgPath = Path.Combine(Directory.GetCurrentDirectory(), "Static", "IMG", fileName);
-                var img = await File.ReadAllTextAsync(imgPath);
-                await context.Response.WriteAsync(img);
+                // var img = 
+                // await context.Response.WriteAsync(img);
             });
         }
     }
