@@ -3,11 +3,11 @@
 * Будет "захватываться" тремя функциями
 * 
 * */ 
-let session =  {
-    'startDate' : new Date().toLocaleString(),
-    'userAgent' : window.navigator.userAgent,
-    'userAge' : prompt("Пожалуйста, введите ваш возраст?")
- }
+// let session =  {
+//     'startDate' : new Date().toLocaleString(),
+//     'userAgent' : window.navigator.userAgent,
+//     'userAge' : prompt("Пожалуйста, введите ваш возраст?")
+//  }
 
 /*
 * Сохранение данных сессии сразу при заходе пользователя на страницу
