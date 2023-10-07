@@ -14,7 +14,7 @@ public static class EndpointMapper
     /// <param name="builder"></param>
     public static void MapCss(this IEndpointRouteBuilder builder)
     {
-        var cssFiles = new[] { "index.css" };
+        var cssFiles = new[] { "index.css", "itc-slider.css" };
         foreach (var fileName in cssFiles)
         {
             builder.MapGet($"/Static/CSS/{fileName}", async context =>
@@ -31,7 +31,7 @@ public static class EndpointMapper
     /// <param name="builder"></param>
     public static void MapJs(this IEndpointRouteBuilder builder)
     {
-        var jsFiles = new[] { "index.js", "testing.js", "about.js" };
+        var jsFiles = new[] { "index.js", "testing.js", "about.js", "itc-slider.js" };
         foreach (var fileName in jsFiles)
         {
             builder.MapGet($"/Static/JS/{fileName}", async context =>
@@ -42,18 +42,18 @@ public static class EndpointMapper
             });
         }
     }
-    public static void MapImg(this IEndpointRouteBuilder builder)
+    public static void MapImgs(this IEndpointRouteBuilder builder)
     {
-        var imgFiles = new[]{"london.jpg", "ny.jpg", "spb.jpg"};
-        foreach(var fileName in imgFiles)
-        {
-            builder.MapGet($"/Static/IMG/{fileName}", async context =>
-            {
-                var imgPath = Path.Combine(Directory.GetCurrentDirectory(), "Static", "IMG", fileName);
-                // var img = 
-                // await context.Response.WriteAsync(img);
-            });
-        }
+        // builder.
+        // var imgFiles = new[]{"london.jpg", "ny.jpg", "spb.jpg"};
+        // foreach(var fileName in imgFiles)
+        // {
+        //     builder.MapGet($"/Static/IMG/{fileName}", async context =>
+        //     {
+        //         var imgPath = Path.Combine(Directory.GetCurrentDirectory(), "Static", "IMG", fileName);
+        //         await context.Response.WriteAsync(imgPath);
+        //     });
+        // }
     }
 
     public static void MapHtml(this IEndpointRouteBuilder builder)
