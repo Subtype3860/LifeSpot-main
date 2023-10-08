@@ -14,7 +14,7 @@ public static class EndpointMapper
     /// <param name="builder"></param>
     public static void MapCss(this IEndpointRouteBuilder builder)
     {
-        var cssFiles = new[] { "index.css", "itc-slider.css" };
+        var cssFiles = new[] { "index.css", "slider.css" };
         foreach (var fileName in cssFiles)
         {
             builder.MapGet($"/Static/CSS/{fileName}", async context =>
@@ -31,7 +31,7 @@ public static class EndpointMapper
     /// <param name="builder"></param>
     public static void MapJs(this IEndpointRouteBuilder builder)
     {
-        var jsFiles = new[] { "index.js", "testing.js", "about.js", "itc-slider.js" };
+        var jsFiles = new[] { "index.js", "testing.js", "about.js", "slider.js" };
         foreach (var fileName in jsFiles)
         {
             builder.MapGet($"/Static/JS/{fileName}", async context =>
